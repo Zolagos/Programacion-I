@@ -28,10 +28,16 @@ class Item:
         else:
             print("The price must be greater than 0")
 
+    def get_description(self):
+        return self._description
+    
+    def set_description(self, new_description):
+        if new_description != "":
+            self._description = new_description
+        else:
+            print("The description can not be empty")
+            
+
     # Show info
     def show_info(self):
         return (f"Item: {self.get_name()}, price: {self.get_price()}, description: {self.description}")
-
-    # Calculate total
-    def calculate_total(self):
-        return self.get_price()
